@@ -1,0 +1,96 @@
+.container {
+  margin: 20px auto;
+}
+
+.emoji {
+  font-size: 150px;
+  position: relative;
+  right: -10px;
+  top: -10px;
+}
+
+.temperature {
+  font-size: 130px;
+  position: relative;
+  right: -250px;
+  top: -240px;
+}
+
+.city {
+  font-size: 50px;
+  margin: 10px;
+}
+
+.date {
+  font-size: 25px;
+  margin: 10px;
+  padding: 0px;
+}
+
+.condition {
+  font-size: 20px;
+  position: relative;
+  top: -270px;
+  right: -275px;
+}
+
+.row {
+  position: relative;
+  top: -600px;
+  right: -450px;
+  font-size: 20px;
+  text-align: center;
+}
+
+#days {
+  font-size: 25px;
+  position: relative;
+  right: 0px;
+  top: -580px;
+}
+
+.weather-app {
+  border: 1px solid black;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 900px;
+  background: #e0fbfc;
+  height: 600px;
+}
+
+.vertical {
+  border-left: 1px solid #c0bcc9;
+  height: 200px;
+  position: relative;
+  top: -470px;
+  right: -460px;
+}
+
+#first-line {
+  position: relative;
+  top: -650px;
+}
+
+form {
+  width: 600px;
+}
+
+#weekdays {
+  border: 1px solid #c0bcc9;
+  border-radius: 10px;
+  height: 140px;
+  width: 100px;
+  margin: 20px auto;
+}
+
+.units {
+  position: relative;
+  font-size: 20px;
+  right: -390px;
+  top: -420px;
+}
+
+#enter-form {
+  width: 700px;
+}
