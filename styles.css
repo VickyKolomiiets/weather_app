@@ -94,3 +94,8 @@ form {
 #enter-form {
   width: 700px;
 }
+
+small {
+  position: relative;
+  margin-left: 200px;
+}
