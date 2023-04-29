@@ -101,7 +101,7 @@ searchForm.addEventListener("submit", handleSubmit);
 searchCity("Kyiv");
 
 function searchLocation(position) {
-  let apiKey = "2ff29bed3181c3526c35cc5408037f85";
+  let apiKey = "8572f3214ece90c3f4c5fc714f4ddbce";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(showWeather);
