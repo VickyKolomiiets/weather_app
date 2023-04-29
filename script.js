@@ -60,6 +60,19 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
+function formatDate(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minutes = date.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
 function showWeather(response) {
   document.querySelector("#city-main").innerHTML = response.data.name;
   document.querySelector("#current-temperature").innerHTML = Math.round(
@@ -80,6 +93,9 @@ function showWeather(response) {
   );
   document.querySelector(".condition").innerHTML =
     response.data.weather[0].main;
+
+  const currentTime = document.querySelector("#current-time");
+  currentTime.innerHTML = formatDate(response.data.dt * 1000);
 }
 
 function searchCity(city) {
