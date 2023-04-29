@@ -99,10 +99,17 @@ form {
 }
 
 #enter-form {
-  width: 700px;
+  width: 600px;
+  height: 40px;
 }
 
 small {
   position: relative;
   margin-left: 200px;
+}
+
+.btn-primary {
+  position: relative;
+  right: -620px;
+  top: -54px;
 }
