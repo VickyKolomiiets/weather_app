@@ -114,3 +114,8 @@ small {
   right: -620px;
   top: -54px;
 }
+
+#btn-search {
+  position: relative;
+  margin-left: 5px;
+}
