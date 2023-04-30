@@ -5,15 +5,16 @@
 .emoji {
   font-size: 150px;
   position: relative;
-  right: -10px;
-  top: -10px;
+  width: 100px;
+  right: -50px;
+  top: 40px;
 }
 
 .temperature {
   font-size: 130px;
   position: relative;
   right: -250px;
-  top: -240px;
+  top: -140px;
 }
 
 .city {
@@ -37,7 +38,7 @@
 .condition {
   font-size: 20px;
   position: relative;
-  top: -270px;
+  top: -150px;
   right: -275px;
 }
 
@@ -53,7 +54,7 @@
   font-size: 25px;
   position: relative;
   right: 0px;
-  top: -580px;
+  top: -450px;
 }
 
 .weather-app {
@@ -70,13 +71,13 @@
   border-left: 1px solid #c0bcc9;
   height: 200px;
   position: relative;
-  top: -470px;
+  top: -370px;
   right: -460px;
 }
 
 #first-line {
   position: relative;
-  top: -650px;
+  top: -450px;
 }
 
 form {
@@ -95,7 +96,7 @@ form {
   position: relative;
   font-size: 20px;
   right: -390px;
-  top: -420px;
+  top: -320px;
 }
 
 #enter-form {
