@@ -119,3 +119,16 @@ small {
   position: relative;
   margin-left: 5px;
 }
+
+#celsius-link {
+  text-decoration: none;
+}
+
+#fahrenheit-link {
+  text-decoration: none;
+}
+
+.active {
+  color: black;
+  cursor: default;
+}

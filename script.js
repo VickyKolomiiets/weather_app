@@ -42,24 +42,6 @@ const cityNameEnter = function (event) {
 const form = document.querySelector("#enter-form");
 form.addEventListener("submit", cityNameEnter);
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = 50;
-}
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector(".temperature");
-  temperatureElement.innerHTML = 10;
-}
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
-
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -75,9 +57,6 @@ function formatDate(timestamp) {
 
 function showWeather(response) {
   document.querySelector("#city-main").innerHTML = response.data.name;
-  document.querySelector("#current-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
 
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#high").innerHTML = Math.round(
@@ -87,6 +66,11 @@ function showWeather(response) {
   document.querySelector("#low").innerHTML = Math.round(
     response.data.main.temp_min
   );
+
+  celsiusTemperature = response.data.main.temp;
+
+  document.querySelector("#current-temperature").innerHTML =
+    Math.round(celsiusTemperature);
 
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -121,8 +105,6 @@ function handleSubmit(event) {
 let searchForm = document.querySelector("#enter-form");
 searchForm.addEventListener("submit", handleSubmit);
 
-searchCity("Kyiv");
-
 function searchLocation(position) {
   let apiKey = "8572f3214ece90c3f4c5fc714f4ddbce";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -137,3 +119,30 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#current-temperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
+
+searchCity("Kyiv");
