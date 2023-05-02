@@ -55,6 +55,30 @@ function formatDate(timestamp) {
   return `${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Fri", "Sat", "Sun", "Mon", "Tue", "Wed"];
+
+  let forecastHTML = `<div class="row" id="days">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2" id="weekdays">
+      <div class="weather-forecast-date">${day}</div>
+      <img src="" alt="" />
+      <div class="weather-forecast-temperatures">
+        <span class="weather-forecast-temperature-max"> 18° </span>
+        <span class="weather-forecast-temperature-min"> 12° </span>
+      </div>
+    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function showWeather(response) {
   document.querySelector("#city-main").innerHTML = response.data.name;
 
@@ -146,3 +170,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
 searchCity("Kyiv");
+
+displayForecast();
