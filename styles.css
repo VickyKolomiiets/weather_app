@@ -90,6 +90,8 @@ form {
   height: 140px;
   width: 100px;
   margin: 20px auto;
+  padding-top: 7px;
+  color: black;
 }
 
 .units {
@@ -131,4 +133,16 @@ small {
 .active {
   color: black;
   cursor: default;
+}
+
+.weather-forecast-temperatures {
+  font-size: 20px;
+}
+
+.weather-forecast-date {
+  opacity: 0.7;
+}
+
+.weather-forecast-temperature-min {
+  opacity: 0.6;
 }
