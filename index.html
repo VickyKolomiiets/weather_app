@@ -13,6 +13,13 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather app</title>
     <link href="styles.css" rel="stylesheet" />
   </head>
@@ -60,34 +67,34 @@
           <div class="col-2">
             <span id="high"></span>°
             <br />
-            High
+            <span class="components">High </span>
           </div>
           <div class="col-2">
             <span id="wind"></span> km/h
             <br />
-            Wind
+            <span class="components"> Wind</span>
           </div>
           <div class="col-2">
             06:29
             <br />
-            Sunrise
+            <span class="components"> Sunrise </span>
           </div>
         </div>
         <div class="row" id="second-line">
           <div class="col-2">
             <span id="low"></span>°
             <br />
-            Low
+            <span class="components"> Low</span>
           </div>
           <div class="col-2">
             <span id="humidity"></span>%
             <br />
-            Humidity
+            <span class="components"> Humidity</span>
           </div>
           <div class="col-2">
             17:29
             <br />
-            Sunset
+            <span class="components"> Sunset</span>
           </div>
         </div>
         <div class="weather-forecast" id="forecast"></div>

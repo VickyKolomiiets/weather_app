@@ -1,31 +1,37 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
 .container {
   margin: 20px auto;
 }
 
 .emoji {
-  font-size: 150px;
   position: relative;
   width: 100px;
   right: -50px;
-  top: 40px;
+  top: 20px;
+  width: 150px;
 }
 
 .temperature {
-  font-size: 130px;
+  font-size: 100px;
   position: relative;
-  right: -250px;
-  top: -140px;
+  right: -220px;
+  top: -130px;
 }
 
 .city {
   font-size: 70px;
   margin: 10px;
+  font-weight: 600;
 }
 
 .time {
-  font-size: 20px;
-  margin-left: 10px;
+  font-size: 12px;
+  margin-left: 14px;
   margin-top: 0;
+  color: #88858f;
 }
 
 .date {
@@ -39,15 +45,20 @@
   font-size: 20px;
   position: relative;
   top: -150px;
-  right: -275px;
+  right: -225px;
 }
 
 .row {
   position: relative;
-  top: -600px;
-  right: -450px;
-  font-size: 20px;
+  top: -500px;
+  right: -400px;
+  font-size: 18px;
   text-align: center;
+  color: #88858f;
+}
+
+#first-line {
+  padding-bottom: 30px;
 }
 
 #days {
@@ -63,21 +74,16 @@
   border-radius: 10px;
   margin: 30px auto;
   max-width: 900px;
-  background: #e0fbfc;
-  height: 620px;
+  background: #d8f2ff;
+  height: 610px;
 }
 
 .vertical {
   border-left: 1px solid #c0bcc9;
-  height: 200px;
+  height: 180px;
   position: relative;
-  top: -370px;
-  right: -460px;
-}
-
-#first-line {
-  position: relative;
-  top: -450px;
+  top: -340px;
+  right: -400px;
 }
 
 form {
@@ -85,20 +91,26 @@ form {
 }
 
 #weekdays {
-  border: 1px solid #c0bcc9;
+  border: 1px solid #bbd3df;
   border-radius: 10px;
   height: 140px;
   width: 100px;
   margin: 20px auto;
+  font-size: 28px;
   padding-top: 7px;
   color: black;
+  background-color: white;
+}
+
+#weekdays:hover {
+  transform: scale(1.1);
 }
 
 .units {
   position: relative;
-  font-size: 20px;
-  right: -390px;
-  top: -320px;
+  font-size: 16px;
+  right: -320px;
+  top: -280px;
 }
 
 #enter-form {
@@ -118,7 +130,6 @@ small {
 }
 
 #btn-search {
-  position: relative;
   margin-left: 5px;
 }
 
@@ -140,9 +151,17 @@ small {
 }
 
 .weather-forecast-date {
-  opacity: 0.7;
+  color: #a7c2d3;
 }
 
 .weather-forecast-temperature-min {
   opacity: 0.6;
+}
+
+#city-input {
+  border-radius: 5px;
+}
+
+.components {
+  color: black;
 }
