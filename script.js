@@ -123,6 +123,14 @@ function showWeather(response) {
   const currentTime = document.querySelector("#current-time");
   currentTime.innerHTML = formatDate(response.data.dt * 1000);
 
+  const sunrise = document.querySelector("#sunrise");
+  sunrise.innerHTML = formatDate(response.data.sys.sunrise * 1000);
+
+  const sunset = document.querySelector("#sunset");
+  sunset.innerHTML = formatDate(response.data.sys.sunset * 1000);
+
+  console.log(response);
+
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
