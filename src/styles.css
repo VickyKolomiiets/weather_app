@@ -6,6 +6,30 @@ body {
   margin: 20px auto;
 }
 
+.weather-app {
+  border: 1px solid #c7e7f7;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 900px;
+  background: #d8f2ff;
+  height: 610px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#enter-form {
+  width: 600px;
+  height: 40px;
+}
+
+#city-input {
+  border-radius: 5px;
+}
+
+#btn-search {
+  margin-left: 10px;
+}
+
 .emoji {
   position: relative;
   width: 100px;
@@ -27,13 +51,6 @@ body {
   font-weight: 600;
 }
 
-.time {
-  font-size: 12px;
-  margin-left: 14px;
-  margin-top: 0;
-  color: #88858f;
-}
-
 .date {
   font-size: 25px;
   margin: 10px;
@@ -41,11 +58,25 @@ body {
   padding: 0px;
 }
 
+.time {
+  font-size: 12px;
+  margin-left: 14px;
+  margin-top: 0;
+  color: #88858f;
+}
+
 .condition {
   font-size: 20px;
   position: relative;
   top: -150px;
   right: -225px;
+}
+
+.units {
+  position: relative;
+  font-size: 16px;
+  right: -320px;
+  top: -280px;
 }
 
 .row {
@@ -61,23 +92,6 @@ body {
   padding-bottom: 30px;
 }
 
-#days {
-  font-size: 25px;
-  position: relative;
-  right: 0px;
-  top: -470px;
-}
-
-.weather-app {
-  border: 1px solid black;
-  padding: 30px;
-  border-radius: 10px;
-  margin: 30px auto;
-  max-width: 900px;
-  background: #d8f2ff;
-  height: 610px;
-}
-
 .vertical {
   border-left: 1px solid #c0bcc9;
   height: 180px;
@@ -86,8 +100,11 @@ body {
   right: -400px;
 }
 
-form {
-  width: 600px;
+#days {
+  font-size: 25px;
+  position: relative;
+  right: 0px;
+  top: -470px;
 }
 
 #weekdays {
@@ -106,31 +123,10 @@ form {
   transform: scale(1.1);
 }
 
-.units {
-  position: relative;
-  font-size: 16px;
-  right: -320px;
-  top: -280px;
-}
-
-#enter-form {
-  width: 600px;
-  height: 40px;
-}
-
-small {
-  position: relative;
-  margin-left: 200px;
-}
-
 .btn-primary {
   position: relative;
   right: -620px;
   top: -54px;
-}
-
-#btn-search {
-  margin-left: 5px;
 }
 
 #celsius-link {
@@ -158,10 +154,15 @@ small {
   opacity: 0.6;
 }
 
-#city-input {
-  border-radius: 5px;
-}
-
 .components {
   color: black;
+}
+
+small {
+  position: relative;
+  margin-left: 200px;
+}
+
+#netlify {
+  margin: 0;
 }

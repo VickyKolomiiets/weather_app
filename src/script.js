@@ -72,9 +72,7 @@ function displayForecast(response) {
     if (index < 6) {
       forecastHTML += `<div class="col-2" id="weekdays">
       <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-      <img src="https://openweathermap.org/img/wn/${
-        forecastDay.weather[0].icon
-      }@2x.png" alt="" width="36" />
+      <img src="img/${forecastDay.weather[0].icon}.png" alt="" width="36" />
       <div class="weather-forecast-temperatures">
         <span class="weather-forecast-temperature-max"> ${Math.round(
           forecastDay.temp.max
@@ -129,13 +127,8 @@ function showWeather(response) {
   const sunset = document.querySelector("#sunset");
   sunset.innerHTML = formatDate(response.data.sys.sunset * 1000);
 
-  console.log(response);
-
   let iconElement = document.querySelector("#icon");
-  iconElement.setAttribute(
-    "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", `img/${response.data.weather[0].icon}.png`);
   iconElement.setAttribute("alt", response.data.weather[0].main);
 
   getForecast(response.data.coord);
